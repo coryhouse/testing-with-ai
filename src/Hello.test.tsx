@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/vitest";
-import { it, expect } from "vitest";
+import { it, expect } from "bun:test";
 import Hello from "./Hello";
 
 it("renders the Hello component with heading and paragraph", () => {

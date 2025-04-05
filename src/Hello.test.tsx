@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/vitest";
-import { it, expect } from "vitest";
+import { it, expect } from "bun:test";
 import Hello from "./Hello";
 
 it("renders the Hello component with heading and paragraph", () => {
@@ -11,6 +10,5 @@ it("renders the Hello component with heading and paragraph", () => {
 
 it("does not render any unexpected elements", () => {
   render(<Hello />);
-  screen.debug();
   expect(screen.queryByText("Unexpected Text")).not.toBeInTheDocument();
 });

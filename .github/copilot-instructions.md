@@ -1,24 +1,16 @@
-## Vitest
+## bun:test
 
-We use Vitest for unit testing.
+We use bun:test for unit testing.
 
-We use `@testing-library/react` for testing React components via Vitest.
-
-We extend Vitest with custom matchers from `@testing-library/jest-dom`.
+We use `@testing-library/react` for testing React components with `bun:test`.
 
 We don't use `fireEvent`. We use `@testing-library/user-event` for simulating user interactions in Vitest tests. We run `userEvent.setup()` before render.
 
-We have Vitest configured to run in a browser-like environment using `jsdom`.
+We have `bun:test` configured to run in a browser-like environment using `happydom`.
 
-We don't have globals enabled in Vitest, so we import `it` and `expect` from Vitest in each test file.
+We import `it` and `expect` from `bun:test` in each unit test file.
 
-We store all Vitest tests in `/src` alongside the file under test and the test's filename should end with `.test.ts`.
-
-We import `import "@testing-library/jest-dom/vitest"` at the top of each test file.
-
-We check for element visibility via `toBeVisible`.
-
-We check for absence of elements via `not.toBeInTheDocument`.
+We store Bun unit tests in `/src` alongside the file under test and the test's filename should end with `.test.ts`.
 
 We do NOT use a `describe` block at the top level of the test file.
 

@@ -55,9 +55,8 @@ it("submits the form successfully with valid input", async () => {
   await user.type(messageInput, "Test Message");
   await user.click(submitButton);
 
-  expect(screen.queryByText(/form submitted successfully!/i)).toBeTruthy();
-
   screen.debug();
+  expect(screen.queryByText(/form submitted successfully!/i)).toBeTruthy();
 
   expect(screen.queryByText(/subject is required/i)).toBeFalsy();
   expect(screen.queryByText(/message is required/i)).toBeFalsy();

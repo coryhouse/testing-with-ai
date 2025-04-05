@@ -11,6 +11,5 @@ it("renders the Hello component with heading and paragraph", () => {
 
 it("does not render any unexpected elements", () => {
   render(<Hello />);
-  screen.debug();
   expect(screen.queryByText("Unexpected Text")).not.toBeInTheDocument();
 });

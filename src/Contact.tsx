@@ -48,7 +48,7 @@ export default function Contact() {
         }}
       >
         <div>
-          <label htmlFor="subject">Subject:</label>
+          <label htmlFor="subject">Subject</label>
           <input
             id="subject"
             type="text"
@@ -59,7 +59,7 @@ export default function Contact() {
           {errors.subject && <p style={{ color: "red" }}>{errors.subject}</p>}
         </div>
         <div>
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">Message</label>
           <textarea
             id="message"
             value={message}
